@@ -1,0 +1,31 @@
+
+Desarrollar el proyecto de PIEDRA PAPEL O TIJERA 
+Bajo los siguientes lineamientos.
+
+	1.- Generar aleatoriamente 3 valores
+		que pueden ser: 1,2,3 donde el 1 es pierda, 2 papel y 3 tijera.
+
+	2.- Tomando en cuenta el paso no. 1, realizarlo para ambos usuarios como entrenamiento,
+		donde los usuarios, 1 y 2 son internos o de la misma maquina.
+
+	3.- Realizar las acciones 1 y 2 para 10 juegos, guardando cada jugada, en una matriz.
+
+	4.- Detectar para el usuario 1, que aprenda con que jugadas gano mas veces, de piedra 
+		papel o tijera.	y lo mismo para el usuario 2.
+
+	5.- Evaluar del paso 4 si se repite, elejir uno de los 2 al azar y en el caso
+		que sean diferentes, seleccionar el mayor.
+
+	6.- Aumentamos el porcentaje de aleatoriedad del caso seleccionado.
+
+		Ejemplo: seleccionamos tijera como caso mas recurrente, aumentamos el porcentaje 
+		reducido a los otros 2 casos 
+
+					Piedra 	33%		1/2		16.5%
+					papel 	33%		1/2		16.5%
+					tijera 	33%		Doble	66%
+
+	7.- Despues de 10 generaciones con 10 juegos cada generacion, jugar la maquina contra el usuario
+
+	8.- Jugar 10 generaciones maquina contra usuario y despues que aprenda la maquina solo con la 
+		primer o mayor alternativa que por generacion gana el usuario.
