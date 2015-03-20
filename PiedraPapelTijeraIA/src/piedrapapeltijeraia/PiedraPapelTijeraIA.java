@@ -24,9 +24,7 @@ public class PiedraPapelTijeraIA {
         
         System.out.println("El jugador 1 eligio: " + j1.regMano());
         System.out.println("El jugador 2 eligio: " + j2.regMano());
-        
-        j1.control.cambio
-        
+                
     }
     
 }
