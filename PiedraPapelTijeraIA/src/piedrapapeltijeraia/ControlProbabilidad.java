@@ -7,11 +7,23 @@ package piedrapapeltijeraia;
 */
 public class ControlProbabilidad {
     float[] probs = new float[3];
+    float[] probsT = new float[3];
+
+    public ControlProbabilidad() {
+        probinicial();
+        probT();
+    }
     
-    void probinicial(){
-        probs[0] = 15;
-        probs[1] = 60;
-        probs[2] = 15;
+    public void probinicial(){
+        probs[0] = 30;
+        probs[1] = 30;
+        probs[2] = 30;
+    }
+    
+    void probT(){
+        probsT[0] = probs[0];
+        probsT[1] = probsT[0] + probs[1];
+        probsT[2] = probsT[1] + probs[2];
     }
     
     void cambio(int id){
@@ -25,7 +37,7 @@ public class ControlProbabilidad {
         }
         
         probs[id] += totaldif;
-        
+        probT();
     }
     
     void mostrarProbs(){
@@ -36,7 +48,7 @@ public class ControlProbabilidad {
     }
     
     float[] probas(){
-        return probs;
+        return probsT;
     }
     
     public static void main(String[] args) {
@@ -44,8 +56,9 @@ public class ControlProbabilidad {
         
         obj.probinicial();
         obj.mostrarProbs();
-        obj.cambio(0);
-        obj.mostrarProbs();      
+        obj.cambio(2);
+        obj.mostrarProbs();
+        System.out.println("probt 2 " + obj.probsT[1]);
                 
     }
     
