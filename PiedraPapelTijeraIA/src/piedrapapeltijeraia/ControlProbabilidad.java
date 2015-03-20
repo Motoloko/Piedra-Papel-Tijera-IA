@@ -35,6 +35,10 @@ public class ControlProbabilidad {
         }
     }
     
+    float[] probas(){
+        return probs;
+    }
+    
     public static void main(String[] args) {
         ControlProbabilidad obj = new ControlProbabilidad();
         
