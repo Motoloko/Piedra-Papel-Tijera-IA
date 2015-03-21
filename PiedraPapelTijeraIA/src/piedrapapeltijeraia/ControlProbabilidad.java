@@ -43,7 +43,7 @@ public class ControlProbabilidad {
     void mostrarProbs(){
         System.out.println("Probabilidades: ");
         for(int i = 0 ; i < 3 ; i++){
-            System.out.println(i+1 + ": " + probs[i]);
+            System.out.println(i + ": " + probs[i]);
         }
     }
     

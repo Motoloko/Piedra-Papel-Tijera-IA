@@ -12,19 +12,29 @@ package piedrapapeltijeraia;
  */
 public class PiedraPapelTijeraIA {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Jugador j1 = new Jugador();
-        Jugador j2 = new Jugador();
-        
+    Jugador j1 = new Jugador();
+    Jugador j2 = new Jugador();
+    
+    void jugar(){
         j1.mano();
         j2.mano();
         
         System.out.println("El jugador 1 eligio: " + j1.regMano());
         System.out.println("El jugador 2 eligio: " + j2.regMano());
-                
+        
+        j1.control.cambio(j2.regMano());
+        j2.control.cambio(j1.regMano());
+        
+        j1.control.mostrarProbs();
+        j2.control.mostrarProbs();
+    }
+    
+    public static void main(String[] args) {
+        PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
+        juego.jugar();
+        juego.jugar();
+        juego.jugar();
+        juego.jugar();
     }
     
 }
