@@ -1,15 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package piedrapapeltijeraia;
 
-/**
- *
- * @author Gerardo
- */
 public class PiedraPapelTijeraIA {
 
     Jugador j1 = new Jugador();
@@ -21,6 +11,30 @@ public class PiedraPapelTijeraIA {
         
         System.out.println("El jugador 1 eligio: " + j1.regMano());
         System.out.println("El jugador 2 eligio: " + j2.regMano());
+        
+        if(j1.regMano()==j2.regMano()){
+            System.out.println("Empate");}
+        else{
+        if(((j1.regMano()+j2.regMano())-1)==2){
+            if(j1.regMano()>j2.regMano())
+                    System.out.println("Gano j1 tijera");
+            else
+                System.out.println("Gano j2 tijera");
+        }
+        
+         if(((j1.regMano()+j2.regMano())-1)==1){
+            if(j1.regMano()>j2.regMano())
+                    System.out.println("Gano j1 piedra");
+            else
+                System.out.println("Gano j2 piedra");
+        }
+        if(((j1.regMano()+j2.regMano())-1)==0){
+            if(j1.regMano()>j2.regMano())
+                    System.out.println("Gano j1 papel");
+            else
+                System.out.println("Gano j2 papel");
+        }
+        }
         
         j1.control.cambio(j2.regMano());
         j2.control.cambio(j1.regMano());
