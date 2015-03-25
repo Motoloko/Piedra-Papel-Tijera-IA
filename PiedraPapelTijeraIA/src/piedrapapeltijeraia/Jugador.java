@@ -12,7 +12,7 @@ public class Jugador {
     Jugador(){
        
         control.mostrarProbs();
-        System.out.println("constructor");
+        //System.out.println("constructor");
         
     }
     
@@ -22,10 +22,10 @@ public class Jugador {
     
     void mano(){
         probs = control.probas();
-        System.out.println("probt " + control.probsT[1]);
+        //System.out.println("probt " + control.probsT[1]);
         //control.mostrarProbs();
         num = aleatorio.nextFloat() * (90 - 1) + 1;
-        System.out.println("num = " + num);
+        //System.out.println("num = " + num);
         //Seleccion de mano
         if(num <= probs[0]){
             manoJuego = 0;
@@ -37,7 +37,7 @@ public class Jugador {
             manoJuego = 2;
         }
             
-        System.out.println("Eleji: " + manoJuego);
+        //System.out.println("Eleji: " + manoJuego);
         
     }
     
