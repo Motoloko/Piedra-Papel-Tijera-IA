@@ -1,15 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package piedrapapeltijeraia;
 
-import javax.swing.ImageIcon;
+import java.awt.*;
+import javax.swing.*;
 
-public class PiedraPapelTijeraIA {
+
+public class PiedraPapelTijeraIA{
 
     Jugador j1 = new Jugador();
     Jugador j2 = new Jugador();
     
+    juegon me = new juegon();
+    
     ImageIcon menu = new ImageIcon("menu.jpg");
     ImageIcon jugar = new ImageIcon("jugar.jpg");
-    ImageIcon vs = new ImageIcon("vs.png");
+    ImageIcon juego = new ImageIcon("papel.png");
+    ImageIcon wait = new ImageIcon("juego.png");
+    ImageIcon cero = new ImageIcon("0.png");
+    ImageIcon piedra = new ImageIcon("tijera.png");
+    ImageIcon ves = new ImageIcon("vs.png");
+    ImageIcon tijera = new ImageIcon("wait.png");
     
     int[] guarMano1 = new int [3];
     int[] guarMano2 = new int [3];
@@ -17,50 +32,43 @@ public class PiedraPapelTijeraIA {
     int j2pie=0, j2pap=0, j2tij=0;
     int empate=0, maxj1=0, maxj2=0;
     
+
+    
     void jugar(){
         j1.mano();
         j2.mano();
         
+        int m1 = 0,m2=0;
+        
+        
+        
         System.out.println("El jugador 1 eligio: " + j1.regMano());
+        
         System.out.println("El jugador 2 eligio: " + j2.regMano());
+        m1=j1.regMano();
+        m2=j2.regMano();
         
-//<<<<<<< HEAD
-        if(j1.regMano()==j2.regMano()){
-            System.out.println("Empate");}
-        else{
-        if(((j1.regMano()+j2.regMano())-1)==2){
-            if(j1.regMano()>j2.regMano())
-                    System.out.println("Gano j1 tijera");
-            else
-                System.out.println("Gano j2 tijera");
-        }
+        ImageIcon mano1, mano2;
         
-         if(((j1.regMano()+j2.regMano())-1)==1){
-            if(j1.regMano()>j2.regMano())
-                    System.out.println("Gano j1 piedra");
-            else
-                System.out.println("Gano j2 piedra");
-        }
-        if(((j1.regMano()+j2.regMano())-1)==0){
-            if(j1.regMano()>j2.regMano())
-                    System.out.println("Gano j1 papel");
-            else
-                System.out.println("Gano j2 papel");
-        }
-        }
         
-        j1.control.cambio(j2.regMano());
-        j2.control.cambio(j1.regMano());
-//=======
+        
+        System.out.println(String.valueOf(m1));
+        me.jButton1.setIcon(new ImageIcon("0.png"));
+        
+        
+        me.jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanJose\\Pictures\\piedra.png"));
         //Formas de ganar el jugador 1
         if(j1.regMano()== 0 && j2.regMano() == 2){
             j1pie++;
             guarMano1[0]=j1pie;
+            //jButton2.setIcon(papel);
+            //jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanJose\\Pictures\\piedra.png"));
             System.out.println("Gano el jugador 1\n");
         }
         else if(j1.regMano()== 1 && j2.regMano() == 0){
             j1pap++;
             guarMano1[1]=j1pap;
+            
             System.out.println("Gano el jugador 1\n");
         }
         else if(j1.regMano()== 2 && j2.regMano() == 1){
@@ -92,7 +100,6 @@ public class PiedraPapelTijeraIA {
         
         //j1.control.cambio(j2.regMano());
         //j2.control.cambio(j1.regMano());
-//>>>>>>> origin/master
         
         //j1.control.mostrarProbs();
         //j2.control.mostrarProbs();
@@ -128,10 +135,16 @@ public class PiedraPapelTijeraIA {
         j1.control.mostrarProbs();
         j2.control.mostrarProbs();
     }
-    
-    public static void main(String[] args) {
-        PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
+
+   
+
+
+
+ public static void main(String[] args) {
+        //m.setVisible(true);
         
+         PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
+        juego.me.setVisible(true);
         for(int j=0 ; j < 3; j++){
             for (int i = 0; i < 10; i++) {
                 System.out.println("Juego " + (i+1));
@@ -140,9 +153,19 @@ public class PiedraPapelTijeraIA {
             
             juego.mejor();
             juego.cambiarPro();
+            
+            
         }
         
+        
+        /*juegon
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new juegon().setVisible(true);
+            }
+        });
+        */
+        //juego.m.jButton1.setIcon(juego.cero);
+        
     }
-    
-    
 }
