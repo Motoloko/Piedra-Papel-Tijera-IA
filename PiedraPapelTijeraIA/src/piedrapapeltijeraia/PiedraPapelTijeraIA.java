@@ -107,11 +107,15 @@ public class PiedraPapelTijeraIA {
     public static void main(String[] args) {
         PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
         
-        for (int i = 0; i < 10; i++) {
-            juego.jugar();
+        for(int j=0 ; j < 3; j++){
+            for (int i = 0; i < 10; i++) {
+                System.out.println("Juego " + (i+1));
+                juego.jugar();
+            }
+            
+            juego.mejor();
+            juego.cambiarPro();
         }
-        juego.mejor();
-        juego.cambiarPro();
         
     }
     
