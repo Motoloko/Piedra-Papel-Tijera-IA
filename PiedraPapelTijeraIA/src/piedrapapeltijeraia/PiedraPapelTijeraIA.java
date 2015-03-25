@@ -48,12 +48,14 @@ public class PiedraPapelTijeraIA{
         m1=j1.regMano();
         m2=j2.regMano();
         
-        ImageIcon mano1, mano2;
+        me.jButton1.setIcon(new ImageIcon(getClass().getResource("imagenes/" + String.valueOf(m1)+".png")));
+        me.jButton2.setIcon(new ImageIcon(getClass().getResource("imagenes/" + String.valueOf(m2)+".png")));
+        
+        System.out.println("Paso la asignacion de imagen");
         
         
         
-        System.out.println(String.valueOf(m1));
-        me.jButton1.setIcon(new ImageIcon("piedrapapeltijeraia.imagenes\0.png"));
+        
         
         
         //me.jButton1.setIcon(new javax.swing.ImageIcon(cero));
@@ -154,8 +156,9 @@ public class PiedraPapelTijeraIA{
  public static void main(String[] args) {
         //m.setVisible(true);
         
-         PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
+        PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
         juego.me.setVisible(true);
+        
         for(int j=0 ; j < 3; j++){
             for (int i = 0; i < 10; i++) {
                 System.out.println("Juego " + (i+1));

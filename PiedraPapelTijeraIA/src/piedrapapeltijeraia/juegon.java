@@ -11,7 +11,7 @@ public class juegon extends javax.swing.JFrame {
 
     public juegon() {
         super("Piedra Papel o Tijera Inteligente");
-        setContentPane(new JLabel(new ImageIcon("C:\\Users\\JuanJose\\Documents\\GitHub\\Piedra-Papel-Tijera-IA\\PiedraPapelTijeraIA\\src\\piedrapapeltijeraia\\imagenes\\juego.png")));
+        setContentPane(new JLabel(new ImageIcon(this.getClass().getResource("imagenes/juego.png"))));
         initComponents();
         //juegon m = new juegon(this);
     }
