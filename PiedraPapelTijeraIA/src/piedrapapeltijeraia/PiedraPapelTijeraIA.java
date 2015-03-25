@@ -68,6 +68,7 @@ public class PiedraPapelTijeraIA{
             //jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanJose\\Pictures\\piedra.png"));
             System.out.println("Gano el jugador 1\n");
             me.jTextArea1.append("\tGano el jugador 1\n");
+            me.jLabel1.setText("Gano el Jugador 1");
         }
         else if(j1.regMano()== 1 && j2.regMano() == 0){
             j1pap++;
@@ -75,12 +76,14 @@ public class PiedraPapelTijeraIA{
             
             System.out.println("Gano el jugador 1\n");
             me.jTextArea1.append("\tGano el jugador 1\n");
+            me.jLabel1.setText("Gano el Jugador 1");
         }
         else if(j1.regMano()== 2 && j2.regMano() == 1){
             j1tij++;
             guarMano1[2]=j1tij;
             System.out.println("Gano el jugador 1\n");
             me.jTextArea1.append("\tGano el jugador 1\n");
+            me.jLabel1.setText("Gano el Jugador 1");
         }
         //Formas de ganar el jugador 2
         else if(j2.regMano()== 0 && j1.regMano() == 2){
@@ -88,22 +91,26 @@ public class PiedraPapelTijeraIA{
             guarMano2[0]=j2pie;
             System.out.println("Gano el jugador 2\n");
             me.jTextArea1.append("\tGano el jugador 2\n");
+            me.jLabel1.setText("Gano el Jugador 2");
         }
         else if(j2.regMano()== 1 && j1.regMano() == 0){
             j2pap++;
             guarMano2[1]=j2pap;
             System.out.println("Gano el jugador 2\n");
             me.jTextArea1.append("\tGano el jugador 2\n");
+            me.jLabel1.setText("Gano el Jugador 2");
         }
         else if(j2.regMano()== 2 && j1.regMano() == 1){
             j2tij++;
             guarMano2[2]=j2tij;
             System.out.println("Gano el jugador 2\n");
             me.jTextArea1.append("\tGano el jugador 2\n");
+            me.jLabel1.setText("Gano el Jugador 2");
         }
         else{
             System.out.println("Quedaron empate\n");
             me.jTextArea1.append("\tQuedaron empate\n");
+            me.jLabel1.setText("Empate");
             empate++;
          
         
@@ -167,9 +174,10 @@ public class PiedraPapelTijeraIA{
                 Thread.sleep(1000);
             }
             
+            juego.me.jLabel1.setText("Fin de la Ronda");
             juego.mejor();
             juego.cambiarPro();
-            
+            Thread.sleep(5000);
             
         }
         
