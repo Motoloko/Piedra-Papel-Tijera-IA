@@ -11,7 +11,7 @@ public class juegon extends javax.swing.JFrame {
 
     public juegon() {
         super("Piedra Papel o Tijera Inteligente");
-        setContentPane(new JLabel(new ImageIcon("C:\\Users\\JuanJose\\Pictures\\juego.png")));
+        setContentPane(new JLabel(new ImageIcon("C:\\Users\\JuanJose\\Documents\\GitHub\\Piedra-Papel-Tijera-IA\\PiedraPapelTijeraIA\\src\\piedrapapeltijeraia\\imagenes\\juego.png")));
         initComponents();
         //juegon m = new juegon(this);
     }
@@ -39,11 +39,12 @@ public class juegon extends javax.swing.JFrame {
         setResizable(false);
 
         jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(255, 204, 102));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton1.setBorderPainted(false);
+        jButton1.setBackground(new java.awt.Color(255, 102, 255));
         jButton1.setContentAreaFilled(false);
         jButton1.setDefaultCapable(false);
         jButton1.setFocusPainted(false);
@@ -72,8 +73,8 @@ public class juegon extends javax.swing.JFrame {
                 .addGap(52, 52, 52))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(379, 379, 379))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(397, 397, 397))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,24 +87,24 @@ public class juegon extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(247, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76))
+                .addGap(69, 69, 69)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
     
-    
-    ImageIcon menu = new ImageIcon("menu.jpg");
-    ImageIcon jugar = new ImageIcon("jugar.jpg");
-    ImageIcon juego = new ImageIcon("papel.png");
-    ImageIcon wait = new ImageIcon("juego.png");
-    ImageIcon papel = new ImageIcon("piedra.png");
-    ImageIcon piedra = new ImageIcon("tijera.png");
-    ImageIcon ves = new ImageIcon("vs.png");
-    ImageIcon tijera = new ImageIcon("wait.png");
+//    
+//    ImageIcon menu = new ImageIcon("menu.jpg");
+//    ImageIcon jugar = new ImageIcon("jugar.jpg");
+//    ImageIcon juego = new ImageIcon("papel.png");
+//    ImageIcon wait = new ImageIcon("juego.png");
+//    ImageIcon papel = new ImageIcon("piedra.png");
+//    ImageIcon piedra = new ImageIcon("tijera.png");
+//    ImageIcon ves = new ImageIcon("vs.png");
+//    ImageIcon tijera = new ImageIcon("wait.png");
     
     public static void main(String[] args) {
         //m.setVisible(true);
@@ -123,9 +124,9 @@ public class juegon extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    public javax.swing.JButton jButton2;
+    public javax.swing.JButton jButton3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
