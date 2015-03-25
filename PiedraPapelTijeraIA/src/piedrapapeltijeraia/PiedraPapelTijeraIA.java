@@ -153,7 +153,7 @@ public class PiedraPapelTijeraIA{
 
 
 
- public static void main(String[] args) {
+ public static void main(String[] args) throws InterruptedException {
         //m.setVisible(true);
         
         PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
@@ -164,7 +164,7 @@ public class PiedraPapelTijeraIA{
                 System.out.println("Juego " + (i+1));
                 
                 juego.jugar();
-                
+                Thread.sleep(1000);
             }
             
             juego.mejor();
