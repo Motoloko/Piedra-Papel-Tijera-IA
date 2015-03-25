@@ -116,6 +116,8 @@ public class PiedraPapelTijeraIA{
         
         }
             
+        JScrollBar sb = me.jScrollPane1.getVerticalScrollBar();
+        sb.setValue(sb.getMaximum());
         //me.jTextArea1.append("\t---------------Juego------------\n");
         //j1.control.cambio(j2.regMano());
         //j2.control.cambio(j1.regMano());
