@@ -168,7 +168,7 @@ public class PiedraPapelTijeraIA{
         
         PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
         juego.meme.setVisible(true);
-       Thread.sleep(5000);
+       Thread.sleep(2000);
        juego.meme.setVisible(false);
         juego.me.setVisible(true);
         
