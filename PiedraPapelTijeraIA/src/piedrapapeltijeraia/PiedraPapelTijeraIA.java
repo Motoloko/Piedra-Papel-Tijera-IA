@@ -17,7 +17,7 @@ public class PiedraPapelTijeraIA{
     
     juegon me = new juegon();
     menu meme = new menu();
-    
+        
     ImageIcon menu = new ImageIcon("menu.jpg");
     ImageIcon jugar = new ImageIcon("jugar.jpg");
     ImageIcon juego = new ImageIcon("juego.png");
@@ -167,6 +167,9 @@ public class PiedraPapelTijeraIA{
         //m.setVisible(true);
         
         PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
+        juego.meme.setVisible(true);
+       Thread.sleep(5000);
+       juego.meme.setVisible(false);
         juego.me.setVisible(true);
         
         for(int j=0 ; j < 3; j++){
