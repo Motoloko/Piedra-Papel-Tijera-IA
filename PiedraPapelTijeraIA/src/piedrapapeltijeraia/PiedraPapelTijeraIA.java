@@ -16,6 +16,7 @@ public class PiedraPapelTijeraIA{
     Jugador j2 = new Jugador();
     
     juegon me = new juegon();
+    menu meme = new menu();
     
     ImageIcon menu = new ImageIcon("menu.jpg");
     ImageIcon jugar = new ImageIcon("jugar.jpg");
