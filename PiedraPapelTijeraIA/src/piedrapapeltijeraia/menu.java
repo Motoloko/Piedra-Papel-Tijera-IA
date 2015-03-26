@@ -21,7 +21,7 @@ public class menu extends javax.swing.JFrame {
     
     public menu() {
         super("Piedra Papel o Tijera Inteligente");
-        setContentPane(new JLabel(new ImageIcon("C:\\Users\\JuanJose\\Documents\\GitHub\\Piedra-Papel-Tijera-IA\\PiedraPapelTijeraIA\\src\\piedrapapeltijeraia\\menu.jpg")));
+        setContentPane(new JLabel(new ImageIcon(this.getClass().getResource("imagenes/menu.png"))));
         initComponents();
         
         //PiedraPapelTijeraIA hola = new PiedraPapelTijeraIA();
