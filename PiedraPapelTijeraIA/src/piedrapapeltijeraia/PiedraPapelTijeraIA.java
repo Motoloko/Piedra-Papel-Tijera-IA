@@ -49,12 +49,14 @@ public class PiedraPapelTijeraIA{
         m1=j1.regMano();
         m2=j2.regMano();
         
-        ImageIcon mano1, mano2;
+        me.jButton1.setIcon(new ImageIcon(getClass().getResource("imagenes/" + String.valueOf(m1)+".png")));
+        me.jButton2.setIcon(new ImageIcon(getClass().getResource("imagenes/" + String.valueOf(m2)+".png")));
+        
+        System.out.println("Paso la asignacion de imagen");
         
         
         
-        System.out.println(String.valueOf(m1));
-        me.jButton1.setIcon(new ImageIcon("piedrapapeltijeraia.imagenes\0.png"));
+        
         
         
         //me.jButton1.setIcon(new javax.swing.ImageIcon(cero));
@@ -67,6 +69,7 @@ public class PiedraPapelTijeraIA{
             //jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanJose\\Pictures\\piedra.png"));
             System.out.println("Gano el jugador 1\n");
             me.jTextArea1.append("\tGano el jugador 1\n");
+            me.jLabel1.setText("Gano el Jugador 1");
         }
         else if(j1.regMano()== 1 && j2.regMano() == 0){
             j1pap++;
@@ -74,12 +77,14 @@ public class PiedraPapelTijeraIA{
             
             System.out.println("Gano el jugador 1\n");
             me.jTextArea1.append("\tGano el jugador 1\n");
+            me.jLabel1.setText("Gano el Jugador 1");
         }
         else if(j1.regMano()== 2 && j2.regMano() == 1){
             j1tij++;
             guarMano1[2]=j1tij;
             System.out.println("Gano el jugador 1\n");
             me.jTextArea1.append("\tGano el jugador 1\n");
+            me.jLabel1.setText("Gano el Jugador 1");
         }
         //Formas de ganar el jugador 2
         else if(j2.regMano()== 0 && j1.regMano() == 2){
@@ -87,22 +92,26 @@ public class PiedraPapelTijeraIA{
             guarMano2[0]=j2pie;
             System.out.println("Gano el jugador 2\n");
             me.jTextArea1.append("\tGano el jugador 2\n");
+            me.jLabel1.setText("Gano el Jugador 2");
         }
         else if(j2.regMano()== 1 && j1.regMano() == 0){
             j2pap++;
             guarMano2[1]=j2pap;
             System.out.println("Gano el jugador 2\n");
             me.jTextArea1.append("\tGano el jugador 2\n");
+            me.jLabel1.setText("Gano el Jugador 2");
         }
         else if(j2.regMano()== 2 && j1.regMano() == 1){
             j2tij++;
             guarMano2[2]=j2tij;
             System.out.println("Gano el jugador 2\n");
             me.jTextArea1.append("\tGano el jugador 2\n");
+            me.jLabel1.setText("Gano el Jugador 2");
         }
         else{
             System.out.println("Quedaron empate\n");
             me.jTextArea1.append("\tQuedaron empate\n");
+            me.jLabel1.setText("Empate");
             empate++;
          
         
@@ -152,22 +161,24 @@ public class PiedraPapelTijeraIA{
 
 
 
- public static void main(String[] args) {
+ public static void main(String[] args) throws InterruptedException {
         //m.setVisible(true);
         
-         PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
+        PiedraPapelTijeraIA juego = new PiedraPapelTijeraIA();
         juego.me.setVisible(true);
+        
         for(int j=0 ; j < 3; j++){
             for (int i = 0; i < 10; i++) {
                 System.out.println("Juego " + (i+1));
                 
                 juego.jugar();
-                
+                Thread.sleep(1000);
             }
             
+            juego.me.jLabel1.setText("Fin de la Ronda");
             juego.mejor();
             juego.cambiarPro();
-            
+            Thread.sleep(5000);
             
         }
         
