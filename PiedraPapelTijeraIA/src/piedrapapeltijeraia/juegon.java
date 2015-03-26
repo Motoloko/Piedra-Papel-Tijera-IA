@@ -39,6 +39,8 @@ public class juegon extends javax.swing.JFrame {
         setFocusableWindowState(false);
         setResizable(false);
 
+        jScrollPane1.setAutoscrolls(true);
+
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(255, 204, 102));
         jTextArea1.setColumns(20);
@@ -139,7 +141,7 @@ public class juegon extends javax.swing.JFrame {
     public javax.swing.JButton jButton2;
     public javax.swing.JButton jButton3;
     public javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
